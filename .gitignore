@@ -1,0 +1,21 @@
+# Gradle
+.gradle/
+build/
+
+# Local configuration
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+
+# Android native build
+.externalNativeBuild/
+.cxx/
+captures/
+
+# Firebase / Google Services (IMPORTANT - see below)
+google-services.json

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg">
+
+    <!-- Grid Background Pattern -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_grid" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:animateLayoutChanges="true">
+
+        <!-- Game Logo/Icon -->
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/splash_logo_bg"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎮"
+            android:textSize="48sp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"/>
+
+        <!-- Game Title - GAMEHUB -->
+        <TextView
+            android:id="@+id/appNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GAMEHUB"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:fontFamily="monospace"
+            android:alpha="0"/>
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/taglineText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEMORY &amp; SKILL BASED GAMES"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp"
+            android:letterSpacing="0.2"
+            android:layout_marginTop="12dp"
+            android:alpha="0"/>
+
+        <!-- Animated Progress Bar -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="60dp">
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="2dp"
+                android:background="@drawable/splash_progress"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Version Text -->
+            <TextView
+                android:id="@+id/versionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V 1.0"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"
+                android:alpha="0"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

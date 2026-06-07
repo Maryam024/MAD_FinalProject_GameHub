@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">GameHub</string>
+
+    <!-- Memory Match Game -->
+    <string name="memory_match">Memory Match</string>
+    <string name="memory_description">Test your memory by matching pairs of cards</string>
+    <string name="moves">Moves:</string>
+    <string name="matches">Matches:</string>
+    <string name="reset_game">Reset Game</string>
+
+    <!-- Quiz Game -->
+    <string name="quiz_challenge">Quiz Challenge</string>
+    <string name="quiz_description">Answer trivia questions under time pressure</string>
+    <string name="question">Question:</string>
+    <string name="score">Score:</string>
+    <string name="time_remaining">Time Remaining</string>
+    <string name="next_question">Next Question</string>
+
+    <!-- Photo Puzzle -->
+    <string name="photo_puzzle">Photo Puzzle</string>
+    <string name="puzzle_description">Capture and solve image puzzles</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="shuffle_puzzle">Shuffle Puzzle</string>
+    <string name="instruction_text">Tap \'Capture Image\' to start</string>
+
+    <!-- Navigation Drawer -->
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_about">About</string>
+
+    <!-- Dialogs -->
+    <string name="congratulations">Congratulations!</string>
+    <string name="game_complete">Game Complete!</string>
+    <string name="quiz_complete">Quiz Complete!</string>
+    <string name="puzzle_solved">Puzzle Solved!</string>
+    <string name="play_again">Play Again</string>
+    <string name="exit">Exit</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Messages -->
+    <string name="profile_updated">Profile updated!</string>
+    <string name="correct_answer">Correct! +10 points</string>
+    <string name="wrong_answer">Wrong! Correct answer: </string>
+    <string name="times_up">Time\'s up!</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="camera_permission_message">Camera permission is needed to play Photo Puzzle game</string>
+    <string name="ok">OK</string>
+
+    <!-- About -->
+    <string name="about_title">About GameHub</string>
+    <string name="about_message">GameHub v1.0\n\nA collection of memory and skill-based mini-games.\n\nFeatures:\n• Memory Match Game\n• Quiz Challenge\n• Photo Puzzle\n\nCreated with ❤️ for Android Development</string>
+
+    <!-- Default player info -->
+    <string name="default_player">Player</string>
+    <string name="score_label">Score: </string>
+</resources>

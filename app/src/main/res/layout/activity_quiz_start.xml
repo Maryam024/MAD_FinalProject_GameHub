@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/card_bg"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/CyberTitle"
+        app:navigationIcon="@drawable/ic_menu_cyber"
+        android:stateListAnimator="@animator/button_scale"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <!-- Neon Glowing Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RAPID FIRE TRIVIA "
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent"
+                android:gravity="center"
+                android:letterSpacing="0.1"
+                android:shadowColor="@color/accent"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="8"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Rules Card - Neon Border -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/card_bg"
+                app:strokeColor="@color/accent"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GAME RULES"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Answer questions before time runs out!\n• Each correct answer gives you 100 points\n• Get combo bonuses for consecutive correct answers!\n• You have 3 lives - answer wrong and lose one\n• Use power-ups to help you!\n• Reach the highest score possible!"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="8dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Start Game Button - Neon Green -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startGameButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="START GAME"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/success"
+                app:cornerRadius="30dp"
+                android:stateListAnimator="@animator/button_scale"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Back Button - Neon Blue -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="BACK TO HUB"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/accent"
+                app:cornerRadius="28dp"
+                android:stateListAnimator="@animator/button_scale"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

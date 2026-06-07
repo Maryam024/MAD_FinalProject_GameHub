@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/card_bg"
+        app:title="RAPID FIRE"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/CyberTitle"
+        app:navigationIcon="@drawable/ic_menu_cyber">
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:src="@android:drawable/ic_media_pause"
+            android:background="@null"
+            android:tint="@color/white"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Top Bar with Score and Lives -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCORE"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/success"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:shadowColor="@color/success"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMBO"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/comboText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0x"
+                android:textColor="@color/warning"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:shadowColor="@color/warning"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIVES"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/livesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❤️❤️❤️"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Question Card - Neon Border -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:strokeColor="@color/accent"
+        app:strokeWidth="1dp"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="28dp"
+            android:text="Question will appear here"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:lineSpacingExtra="6dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Timer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚡ TIME LEFT: "
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:letterSpacing="0.1"/>
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15s"
+            android:textColor="@color/warning"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- Timer Progress Bar -->
+    <ProgressBar
+        android:id="@+id/timerProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:progressTint="@color/accent"
+        android:max="100"/>
+
+    <!-- Power-ups Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="POWER-UPS"
+        android:textColor="@color/text_muted"
+        android:textSize="10sp"
+        android:letterSpacing="0.2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/powerUp5050"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="🎲 50/50"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/info"
+            app:cornerRadius="24dp"
+            android:stateListAnimator="@animator/button_scale"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/powerUpSkip"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="⏭️ SKIP"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/warning"
+            app:cornerRadius="24dp"
+            android:stateListAnimator="@animator/button_scale"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/powerUpTime"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="⏰ +10s"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/success"
+            app:cornerRadius="24dp"
+            android:stateListAnimator="@animator/button_scale"/>
+
+    </LinearLayout>
+
+    <!-- Answer Options -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="SELECT ANSWER"
+        android:textColor="@color/text_muted"
+        android:textSize="10sp"
+        android:letterSpacing="0.2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:text="A. Option 1"
+            android:backgroundTint="@color/card_bg"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            app:cornerRadius="14dp"
+            android:stateListAnimator="@animator/button_scale"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:text="B. Option 2"
+            android:backgroundTint="@color/card_bg"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            app:cornerRadius="14dp"
+            android:stateListAnimator="@animator/button_scale"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:text="C. Option 3"
+            android:backgroundTint="@color/card_bg"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            app:cornerRadius="14dp"
+            android:stateListAnimator="@animator/button_scale"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:text="D. Option 4"
+            android:backgroundTint="@color/card_bg"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            app:cornerRadius="14dp"
+            android:stateListAnimator="@animator/button_scale"/>
+
+    </LinearLayout>
+
+</LinearLayout>
